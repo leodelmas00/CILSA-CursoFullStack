@@ -20,11 +20,11 @@ body{
 body.dark {
     --bg-one: #293751;
     --bg-two: #202020;
-    --bg-three: #83a290;
+    --bg-three: #8be1b5;
     --bg-four: #181818;
-    --bg-five: #22C55E;
-    --bg-six: #178b41;
-    --font-one: #E8F5EE;
+    --bg-five: #19ef6b;
+    --bg-six: #1fc25b;
+    --font-one: #feffff;
 }
 
 .toggle{
@@ -68,6 +68,7 @@ form{
     height: 100%;
     align-items: space-between;
     justify-content: center;
+    gap: 1rem;
 }
 
 input, button {
@@ -79,11 +80,16 @@ input{
     width: 80%;
     padding: 0.5rem;
     background-color: var(--bg-four);
-    color: var(--font-one)
+    color: var(--font-one);
 }
 
 input::placeholder {
     color: var(--bg-three);
+}
+
+label {
+    display: block;
+    color: var(--font-one);
 }
 
 button{
@@ -99,4 +105,45 @@ button{
 
 button:hover{
     background-color: var(--bg-six);
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+        padding: 1.5rem 1rem;
+    }
+
+    .toggle {
+        top: 8px;
+        right: 8px;
+    }
+
+    .toggle span {
+        font-size: 36px !important;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        margin-left: 0;
+    }
 }
