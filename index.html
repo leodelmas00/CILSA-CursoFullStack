@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario-FullStack</title>
+</head>
+<body>
+
+    <button class="toggle" id="toggleBtn" onclick="toggleDarkMode()"><span id="toggleIcon" style="font-size: 50px;">&#127771;</span></button>
+    
+
+    <div class="container">
+
+        <h1>Formulario</h1>
+
+        <form action="">
+            <p>Nombre</p>
+            <input type="text" placeholder="Cosme" required pattern="[a-zA-Z]+">
+            <p>Apellido</p>
+            <input type="text" placeholder="Fulanito" required pattern="[a-zA-Z]+">
+            <p>Email</p>
+            <input type="email" placeholder="fulanito@gmail.com" required>
+            <p>Fecha</p>
+            <input type="date" placeholder="01/01/2000" required>
+            <p>Pais de residencia</p>
+            <input type="text" placeholder="Fulanito Town" required pattern="[a-zA-Z ]+">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+            const icon = document.getElementById('toggleIcon');
+            icon.innerHTML = document.body.classList.contains('dark') ? '&#127774;' : '&#127771;';
+        }
+    </script>
+</body>
+</html>
